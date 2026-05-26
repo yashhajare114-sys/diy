@@ -77,3 +77,44 @@ h1 {
         width: 100%;
     }
 }
+.task-list li {
+    background: #eeeeee;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+
+    animation: fadeSlide 0.3s ease forwards;
+
+    transition: background-color 0.3s ease;
+}
+
+.task-list li:hover {
+    background-color: #dcdcdc;
+}
+
+@keyframes fadeSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
