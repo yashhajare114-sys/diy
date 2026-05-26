@@ -169,3 +169,22 @@ h1 {
 .delete-btn:hover {
     background-color: #cc0000;
 }
+.delete-animation {
+    animation: deleteTask 0.4s ease forwards;
+}
+
+@keyframes deleteTask {
+
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}

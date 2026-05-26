@@ -69,20 +69,11 @@ function addTask() {
         }
     });
 
-    // Delete Button
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
+   deleteBtn.addEventListener("click", function () {
 
-    deleteBtn.addEventListener("click", function () {
+    li.classList.add("delete-animation");
+
+    li.addEventListener("animationend", function () {
         li.remove();
     });
-
-    li.appendChild(checkbox);
-    li.appendChild(span);
-    li.appendChild(deleteBtn);
-
-    taskList.appendChild(li);
-
-    taskInput.value = "";
-}
+});
